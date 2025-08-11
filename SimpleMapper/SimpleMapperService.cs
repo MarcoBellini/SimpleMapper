@@ -1,4 +1,4 @@
-﻿namespace AutoMapper;
+﻿namespace SimpleMapper;
 
 using System.Reflection;
 
@@ -7,7 +7,7 @@ using System.Reflection;
 /// Use this class directly on offline apps, add a signleton service on
 /// Blazor app using ISimpleMapperService interface
 /// </summary>
-public class SimpleMapper : ISimpleMapperService
+public class SimpleMapperService : ISimpleMapperService
 {
 
     private bool PropertyIsInaccessible(PropertyInfo? propertyInfo)

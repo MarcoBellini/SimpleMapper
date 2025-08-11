@@ -1,4 +1,4 @@
-﻿namespace AutoMapper;
+﻿namespace SimpleMapper;
 
 [AttributeUsage(AttributeTargets.Property, AllowMultiple = false, Inherited = false)]
 public class ClassPropertyNameAttribute : Attribute

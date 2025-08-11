@@ -1,8 +1,8 @@
 ﻿
-namespace AutoMapper;
+namespace SimpleMapper;
 
 /// <summary>
-/// Use this interface to add AutoMapper as Singleton service in blazor application.
+/// Use this interface to add SimpleMapperService as Singleton service in blazor application.
 /// </summary>
 public interface ISimpleMapperService
 {
