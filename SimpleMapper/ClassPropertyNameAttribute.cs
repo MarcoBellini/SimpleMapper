@@ -1,5 +1,8 @@
 ﻿namespace SimpleMapper;
 
+/// <summary>
+/// Specifies the name of the property to map in the origin Class(Entity)
+/// </summary>
 [AttributeUsage(AttributeTargets.Property, AllowMultiple = false, Inherited = false)]
 public class ClassPropertyNameAttribute : Attribute
 {
