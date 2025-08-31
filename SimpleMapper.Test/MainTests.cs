@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.Test;
+﻿namespace SimpleMapper.Test;
 
-using AutoMapper;
+using SimpleMapper;
 
 
 /// <summary>
@@ -21,10 +21,10 @@ public class MyClass
 /// </summary>
 public class MyViewModel
 {
-    [ClassPropertyName("Id")]
+    [ClassPropertyName(nameof(MyClass.Id))]
     public int MyId { get; set; }
 
-    [ClassPropertyName("Name")]
+    [ClassPropertyName(nameof(MyClass.Name))]
     public string? MyName { get; set; }
 
     public int MyAge { get; set; } = 18; // Not mapped property, but can be added
@@ -35,10 +35,10 @@ public class MyViewModel
 /// </summary>
 public class MyViewModelWrong
 {
-    [ClassPropertyName("Id")]
+    [ClassPropertyName(nameof(MyClass.Id))]
     public DateTime MyId { get; set; }
 
-    [ClassPropertyName("Name")]
+    [ClassPropertyName(nameof(MyClass.Name))]
     public string? MyName { get; set; }
 }
 
@@ -52,7 +52,7 @@ public class MainTests
     {
 
         MyClass Cls = new MyClass() { Id = 1, Name = "My Name"};
-        SimpleMapper Mapper = new();
+        SimpleMapperService Mapper = new();
 
         var MyModel = Mapper.ClassToViewModel<MyClass, MyViewModel>(Cls);
 
@@ -68,7 +68,7 @@ public class MainTests
     public void ClassToViewModelWrong()
     {
         MyClass Cls = new MyClass() { Id = 1, Name = "My Name" };
-        SimpleMapper Mapper = new();     
+        SimpleMapperService Mapper = new();     
     
         Assert.Throws<InvalidCastException>(() => 
         {
@@ -84,7 +84,7 @@ public class MainTests
     {
 
         MyViewModel Model = new MyViewModel() { MyId = 1, MyName = "My Name" };
-        SimpleMapper Mapper = new();
+        SimpleMapperService Mapper = new();
 
         var MyClass= Mapper.ViewModelToClass<MyClass, MyViewModel>(Model);
 
@@ -101,7 +101,7 @@ public class MainTests
     {
 
         MyViewModelWrong Model = new MyViewModelWrong() { MyId = DateTime.Today, MyName = "My Name" };
-        SimpleMapper Mapper = new();      
+        SimpleMapperService Mapper = new();      
 
         Assert.Throws<InvalidCastException>(() =>
         {

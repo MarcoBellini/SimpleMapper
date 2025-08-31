@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AutoMapper\SimpleMapper.csproj" />
+    <ProjectReference Include="..\SimpleMapper\SimpleMapper.csproj" />
   </ItemGroup>
 
   <ItemGroup>

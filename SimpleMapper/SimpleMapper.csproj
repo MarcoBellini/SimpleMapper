@@ -4,6 +4,27 @@
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <Title>A Simple Mapper between EF Core Entities and View Models for Blazor pages</Title>
+    <Description>A Simple Mapper between EF Core Entities and View Models for Blazor pages</Description>
+    <PackageTags>Mapper;Blazor;</PackageTags>
+    <Version>1.0.0</Version>
+    <Authors>Marco Bellini</Authors>
+    <PackageProjectUrl>https://github.com/MarcoBellini/SimpleMapper</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/MarcoBellini/SimpleMapper</RepositoryUrl>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\CropelliAppOfferte\SimpleMapper\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\..\CropelliAppOfferte\SimpleMapper\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
